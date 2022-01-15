@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Allience Airlines</td>
+            <td>11 Jan 2022, 22:04</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">AllianceAirlinesHome.userShouldBeClickReturnDateAndSelectOneDate()</td>
+              <td>1</td>
+              <td class="duration" data-value="233072500">0.233</td>
+              <td class="duration" data-value="233072500">0.233</td>
+              <td class="duration" data-value="233072500">0.233</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AllianceAirlinesHome.userShouldBeClickTheReturnCheckBox()</td>
+              <td>1</td>
+              <td class="duration" data-value="117730501">0.117</td>
+              <td class="duration" data-value="117730501">0.117</td>
+              <td class="duration" data-value="117730501">0.117</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AllianceAirlinesHome.user_Should_be_Click_the_Book_a_Flight()</td>
+              <td>2</td>
+              <td class="duration" data-value="80351899">0.080</td>
+              <td class="duration" data-value="80351899">0.089</td>
+              <td class="duration" data-value="160703799">0.160</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AllianceAirlinesHome.user_Should_be_Click_the_one_way_check_box()</td>
+              <td>1</td>
+              <td class="duration" data-value="201290700">0.201</td>
+              <td class="duration" data-value="201290700">0.201</td>
+              <td class="duration" data-value="201290700">0.201</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AllianceAirlinesHome.user_Should_be_click_to_and_print_the_dropdown_in_console_and_click_a_sunshine_Coast()</td>
+              <td>2</td>
+              <td class="duration" data-value="451779250">0.451</td>
+              <td class="duration" data-value="451779250">0.458</td>
+              <td class="duration" data-value="903558500">0.903</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AllianceAirlinesHome.user_Should_be_navigate_to_the_flight_availablity_page_and_verify()</td>
+              <td>2</td>
+              <td class="duration" data-value="7519150">0.007</td>
+              <td class="duration" data-value="7519150">0.009</td>
+              <td class="duration" data-value="15038300">0.015</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AllianceAirlinesHome.user_should_be_click_Departure_Date_and_Select_One_date()</td>
+              <td>2</td>
+              <td class="duration" data-value="262989549">0.262</td>
+              <td class="duration" data-value="262989549">0.273</td>
+              <td class="duration" data-value="525979099">0.525</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AllianceAirlinesHome.user_should_be_click_from_and_print_the_cities_in_console_and_click_a_canberra_city()</td>
+              <td>2</td>
+              <td class="duration" data-value="823890149">0.823</td>
+              <td class="duration" data-value="823890149">0.842</td>
+              <td class="duration" data-value="1647780299">1.647</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AllianceAirlinesHome.user_should_be_click_the_Adult_Text_box_and_print_the_drop_down_option_and_click()</td>
+              <td>2</td>
+              <td class="duration" data-value="460503700">0.460</td>
+              <td class="duration" data-value="460503700">0.543</td>
+              <td class="duration" data-value="921007400">0.921</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AllianceAirlinesHome.user_should_be_click_the_button_Book_Now()</td>
+              <td>2</td>
+              <td class="duration" data-value="11670042650">11.670</td>
+              <td class="duration" data-value="11670042650">14.328</td>
+              <td class="duration" data-value="23340085300">23.340</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AllianceAirlinesHome.user_should_be_click_the_child_text_box_and_print_the_drop_down_option_and_click()</td>
+              <td>2</td>
+              <td class="duration" data-value="319414450">0.319</td>
+              <td class="duration" data-value="319414450">0.326</td>
+              <td class="duration" data-value="638828901">0.638</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AllianceAirlinesHome.user_should_be_click_the_infant_text_box_and_print_the_drop_down_option_and_click()</td>
+              <td>2</td>
+              <td class="duration" data-value="347232200">0.347</td>
+              <td class="duration" data-value="347232200">0.377</td>
+              <td class="duration" data-value="694464400">0.694</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomeStepDefenitions.userShouldClickTheButtonAircraftCharter()</td>
+              <td>1</td>
+              <td class="duration" data-value="4425087801">4.425</td>
+              <td class="duration" data-value="4425087801">4.425</td>
+              <td class="duration" data-value="4425087801">4.425</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomeStepDefenitions.userShouldClickTheButtonAircraftSalesAndLease()</td>
+              <td>1</td>
+              <td class="duration" data-value="7528564300">7.528</td>
+              <td class="duration" data-value="7528564300">7.528</td>
+              <td class="duration" data-value="7528564300">7.528</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomeStepDefenitions.userShouldClickTheButtonContactUs()</td>
+              <td>1</td>
+              <td class="duration" data-value="1762766100">1.762</td>
+              <td class="duration" data-value="1762766100">1.762</td>
+              <td class="duration" data-value="1762766100">1.762</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomeStepDefenitions.userShouldClickTheButtonFAQs()</td>
+              <td>1</td>
+              <td class="duration" data-value="3976922900">3.976</td>
+              <td class="duration" data-value="3976922900">3.976</td>
+              <td class="duration" data-value="3976922900">3.976</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomeStepDefenitions.userShouldClickTheFlyWithUsButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="9498085100">9.498</td>
+              <td class="duration" data-value="9498085100">9.498</td>
+              <td class="duration" data-value="9498085100">9.498</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomeStepDefenitions.userShouldClickTheSendButton()</td>
+              <td>3</td>
+              <td class="duration" data-value="162699">0.000</td>
+              <td class="duration" data-value="162699">0.000</td>
+              <td class="duration" data-value="488099">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomeStepDefenitions.userShouldSelectDate()</td>
+              <td>3</td>
+              <td class="duration" data-value="419298499">0.419</td>
+              <td class="duration" data-value="419298499">0.457</td>
+              <td class="duration" data-value="1257895499">1.257</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomeStepDefenitions.userShouldSelectPassanger()</td>
+              <td>3</td>
+              <td class="duration" data-value="179233">0.000</td>
+              <td class="duration" data-value="179233">0.000</td>
+              <td class="duration" data-value="537700">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomeStepDefenitions.userShouldSelectServiceStyle()</td>
+              <td>3</td>
+              <td class="duration" data-value="185666">0.000</td>
+              <td class="duration" data-value="185666">0.000</td>
+              <td class="duration" data-value="557000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomeStepDefenitions.userShouldSelectTime()</td>
+              <td>3</td>
+              <td class="duration" data-value="84594233">0.084</td>
+              <td class="duration" data-value="84594233">0.091</td>
+              <td class="duration" data-value="253782699">0.253</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomeStepDefenitions.userShouldTypeComments(String)</td>
+              <td>3</td>
+              <td class="duration" data-value="177833">0.000</td>
+              <td class="duration" data-value="177833">0.000</td>
+              <td class="duration" data-value="533500">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomeStepDefenitions.userShouldTypeCompanyName(String)</td>
+              <td>3</td>
+              <td class="duration" data-value="80956899">0.080</td>
+              <td class="duration" data-value="80956899">0.086</td>
+              <td class="duration" data-value="242870699">0.242</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomeStepDefenitions.userShouldTypeContactEmailId(String)</td>
+              <td>3</td>
+              <td class="duration" data-value="69805200">0.069</td>
+              <td class="duration" data-value="69805200">0.071</td>
+              <td class="duration" data-value="209415600">0.209</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomeStepDefenitions.userShouldTypeContactName(String)</td>
+              <td>3</td>
+              <td class="duration" data-value="67635866">0.067</td>
+              <td class="duration" data-value="67635866">0.071</td>
+              <td class="duration" data-value="202907600">0.202</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomeStepDefenitions.userShouldTypeContactNumber(String)</td>
+              <td>3</td>
+              <td class="duration" data-value="66102766">0.066</td>
+              <td class="duration" data-value="66102766">0.067</td>
+              <td class="duration" data-value="198308300">0.198</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomeStepDefenitions.userShouldTypeDestination(String)</td>
+              <td>3</td>
+              <td class="duration" data-value="55515733">0.055</td>
+              <td class="duration" data-value="55515733">0.069</td>
+              <td class="duration" data-value="166547200">0.166</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomeStepDefenitions.userShouldTypeOrigin(String)</td>
+              <td>3</td>
+              <td class="duration" data-value="69482033">0.069</td>
+              <td class="duration" data-value="69482033">0.072</td>
+              <td class="duration" data-value="208446101">0.208</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomeStepDefenitions.userVerifyAircraftCharterPageIsLoadOrNot()</td>
+              <td>1</td>
+              <td class="duration" data-value="1721000">0.001</td>
+              <td class="duration" data-value="1721000">0.001</td>
+              <td class="duration" data-value="1721000">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomeStepDefenitions.userVerifyAircraftSalesAndLeasePageIsLoadOrNot()</td>
+              <td>1</td>
+              <td class="duration" data-value="1918899">0.001</td>
+              <td class="duration" data-value="1918899">0.001</td>
+              <td class="duration" data-value="1918899">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomeStepDefenitions.userVerifyContactUsPageIsLoadOrNot()</td>
+              <td>1</td>
+              <td class="duration" data-value="2249399">0.002</td>
+              <td class="duration" data-value="2249399">0.002</td>
+              <td class="duration" data-value="2249399">0.002</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomeStepDefenitions.userVerifyFAQsPageIsLoadOrNot()</td>
+              <td>1</td>
+              <td class="duration" data-value="3330700">0.003</td>
+              <td class="duration" data-value="3330700">0.003</td>
+              <td class="duration" data-value="3330700">0.003</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomeStepDefenitions.userVerifyFlyWithUsPageIsLoadOrNot()</td>
+              <td>1</td>
+              <td class="duration" data-value="1982700">0.001</td>
+              <td class="duration" data-value="1982700">0.001</td>
+              <td class="duration" data-value="1982700">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HooksClass.afterScenario()</td>
+              <td>12</td>
+              <td class="duration" data-value="628748650">0.628</td>
+              <td class="duration" data-value="628748650">0.650</td>
+              <td class="duration" data-value="7544983800">7.544</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HooksClass.beforeScenario()</td>
+              <td>12</td>
+              <td class="duration" data-value="23220417891">23.220</td>
+              <td class="duration" data-value="23220417891">40.275</td>
+              <td class="duration" data-value="278645014698">4:38.645</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HooksClass.endTime()</td>
+              <td>12</td>
+              <td class="duration" data-value="65541">0.000</td>
+              <td class="duration" data-value="65541">0.000</td>
+              <td class="duration" data-value="786501">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HooksClass.startTime()</td>
+              <td>12</td>
+              <td class="duration" data-value="110724">0.000</td>
+              <td class="duration" data-value="110724">0.000</td>
+              <td class="duration" data-value="1328699">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginStepDefenition.print_the_current_url_of_Login_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="2668001">0.002</td>
+              <td class="duration" data-value="2668001">0.002</td>
+              <td class="duration" data-value="2668001">0.002</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginStepDefenition.print_the_tittle_of_Login_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="3658538600">3.658</td>
+              <td class="duration" data-value="3658538600">3.658</td>
+              <td class="duration" data-value="3658538600">3.658</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginStepDefenition.user_Should_Click_login_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="85847700">0.085</td>
+              <td class="duration" data-value="85847700">0.085</td>
+              <td class="duration" data-value="85847700">0.085</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginStepDefenition.user_Should_Show_to_Incorrect_user_and_pass()</td>
+              <td>1</td>
+              <td class="duration" data-value="38111500">0.038</td>
+              <td class="duration" data-value="38111500">0.038</td>
+              <td class="duration" data-value="38111500">0.038</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginStepDefenition.user_Should_be_launch_Browser_and_load_The_Alliance_page_Url()</td>
+              <td>1</td>
+              <td class="duration" data-value="1143300">0.001</td>
+              <td class="duration" data-value="1143300">0.001</td>
+              <td class="duration" data-value="1143300">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginStepDefenition.user_Should_go_to_click_Corporate_Login()</td>
+              <td>1</td>
+              <td class="duration" data-value="147357500">0.147</td>
+              <td class="duration" data-value="147357500">0.147</td>
+              <td class="duration" data-value="147357500">0.147</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginStepDefenition.user_Should_type_the_invalid_agency_name()</td>
+              <td>1</td>
+              <td class="duration" data-value="122764200">0.122</td>
+              <td class="duration" data-value="122764200">0.122</td>
+              <td class="duration" data-value="122764200">0.122</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginStepDefenition.user_Should_type_the_invalid_user_id()</td>
+              <td>1</td>
+              <td class="duration" data-value="112677300">0.112</td>
+              <td class="duration" data-value="112677300">0.112</td>
+              <td class="duration" data-value="112677300">0.112</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginStepDefenition.user_should_type_the_invalid_password()</td>
+              <td>1</td>
+              <td class="duration" data-value="102488400">0.102</td>
+              <td class="duration" data-value="102488400">0.102</td>
+              <td class="duration" data-value="102488400">0.102</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">WhereWeFly.thePageWillBeLoadAndPrintTitileUrl()</td>
+              <td>6</td>
+              <td class="duration" data-value="8611250">0.008</td>
+              <td class="duration" data-value="8611250">0.021</td>
+              <td class="duration" data-value="51667500">0.051</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">WhereWeFly.userShouldClickWhereWeFlyButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="2191902800">2.191</td>
+              <td class="duration" data-value="2191902800">2.191</td>
+              <td class="duration" data-value="2191902800">2.191</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">WhereWeFly.userShouldDisplayTheMessage()</td>
+              <td>1</td>
+              <td class="duration" data-value="231700">0.000</td>
+              <td class="duration" data-value="231700">0.000</td>
+              <td class="duration" data-value="231700">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">WhereWeFly.userVerifyThePageIsLoadOrNot()</td>
+              <td>1</td>
+              <td class="duration" data-value="7644199">0.007</td>
+              <td class="duration" data-value="7644199">0.007</td>
+              <td class="duration" data-value="7644199">0.007</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>51</td>
+            <td>133</td>
+            <td class="duration">2.647</td>
+            <td class="duration">4:38.645</td>
+            <td class="duration">5:52.059</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
